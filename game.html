@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КГБ: Допрос в процессе</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <audio id="bgMusic" loop>
+        <source src="src\music\Geek Music Dexter - The Blood Theme.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="game-container">
+        <div class="game-header">
+            <div class="stamp">СОВЕРШЕННО СЕКРЕТНО</div>
+            <h1>ПРОТОКОЛ ДОПРОСА</h1>
+            <div class="controls">
+                <button id="musicToggle" class="control-btn">🔊</button>
+                <button id="menuBtn" class="control-btn">📋 МЕНЮ</button>
+            </div>
+        </div>
+        
+        <div class="battle-area">
+            <div class="player-card">
+                <div class="portrait-container">
+                    <div class="portrait">👮</div>
+                </div>
+                <h3>Следователь КГБ</h3>
+                <div class="health-bar">
+                    <div class="health-fill" id="playerHealth"></div>
+                </div>
+                <p class="hp-text"><span id="playerHp">100</span> / 100</p>
+            </div>
+            
+            <div class="vs">VS</div>
+            
+            <div class="enemy-card">
+                <div class="portrait-container">
+                    <div class="portrait" id="enemyPortrait">🧑</div>
+                </div>
+                <h3 id="enemyName">Подозреваемый</h3>
+                <div class="health-bar">
+                    <div class="health-fill enemy-health" id="enemyHealth"></div>
+                </div>
+                <p class="hp-text"><span id="enemyHp">100</span> / <span id="enemyMaxHp">100</span></p>
+            </div>
+        </div>
+        
+        <div class="sentence-history" id="sentenceHistory">
+        </div>
+        
+        <div class="typing-area">
+            <div class="target-text" id="targetText">
+                Загрузка предложения...
+            </div>
+            
+            <input 
+                type="text" 
+                id="userInput" 
+                class="user-input" 
+                placeholder="Начните печатать здесь..."
+                autocomplete="off"
+                spellcheck="false"
+            >
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">Время:</span>
+                    <span class="stat-value" id="timer">30</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Ошибки:</span>
+                    <span class="stat-value" id="errors">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Точность:</span>
+                    <span class="stat-value" id="accuracy">100%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="gameOverModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modalTitle">РЕЗУЛЬТАТ</h2>
+            <p id="modalMessage"></p>
+            <div class="modal-buttons">
+                <button onclick="location.reload()" class="modal-btn">ПОВТОРИТЬ</button>
+                <button onclick="location.href='index.html'" class="modal-btn">ВЫБОР УРОВНЯ</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КГБ: Тренажёр Допроса</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <div class="container">
+        <div class="stamp">СОВЕРШЕННО СЕКРЕТНО</div>
+        
+        <h1 class="title">КГБ СССР</h1>
+        <h2 class="subtitle">Тренажёр Допроса</h2>
+        
+        <div class="level-select">
+            <h3>Выберите уровень сложности:</h3>
+            
+            <div class="level-card" onclick="startLevel(1)">
+                <div class="level-portrait">🧑</div>
+                <div class="level-info">
+                    <h4>Уровень 1: Мелкий вор</h4>
+                    <p>Здоровье: 80 | Урон: 10 | Время: 20с</p>
+                    <p class="level-lang">Язык: Русский</p>
+                </div>
+            </div>
+            
+            <div class="level-card" onclick="startLevel(2)">
+                <div class="level-portrait">👨‍💼</div>
+                <div class="level-info">
+                    <h4>Уровень 2: Контрабандист</h4>
+                    <p>Здоровье: 120 | Урон: 15 | Время: 15с</p>
+                    <p class="level-lang">Язык: Русский</p>
+                </div>
+            </div>
+            
+            <div class="level-card" onclick="startLevel(3)">
+                <div class="level-portrait">🕵️</div>
+                <div class="level-info">
+                    <h4>Уровень 3: Шпион-диверсант</h4>
+                    <p>Здоровье: 150 | Урон: 20 | Время: 12с</p>
+                    <p class="level-lang">Язык: Русский</p>
+                </div>
+            </div>
+            
+            <div class="level-card" onclick="startLevel(4)">
+                <div class="level-portrait">👤</div>
+                <div class="level-info">
+                    <h4>Уровень 4: Главарь банды</h4>
+                    <p>Здоровье: 200 | Урон: 25 | Время: 10с</p>
+                    <p class="level-lang">Язык: Русский</p>
+                </div>
+            </div>
+            
+            <div class="level-card" onclick="startLevel(5)">
+                <div class="level-portrait">🎭</div>
+                <div class="level-info">
+                    <h4>Уровень 5: Двойной агент</h4>
+                    <p>Здоровье: 250 | Урон: 30 | Время: 8с</p>
+                    <p class="level-lang">Язык: Русский + English</p>
+                </div>
+            </div>
+            
+            <div class="level-card" onclick="startLevel(6)">
+                <div class="level-portrait">🌐</div>
+                <div class="level-info">
+                    <h4>Уровень 6: Международный террорист</h4>
+                    <p>Здоровье: 300 | Урон: 35 | Время: 7с</p>
+                    <p class="level-lang">Язык: Русский + English</p>
+                </div>
+            </div>
+            
+            <div class="level-card" onclick="startLevel(7)">
+                <div class="level-portrait">👁️</div>
+                <div class="level-info">
+                    <h4>Уровень 7: Глава разведки</h4>
+                    <p>Здоровье: 350 | Урон: 40 | Время: 6с</p>
+                    <p class="level-lang">Язык: Русский + English</p>
+                </div>
+            </div>
+            
+            <div class="level-card" onclick="startLevel(8)">
+                <div class="level-portrait">⚡</div>
+                <div class="level-info">
+                    <h4>Уровень 8: Предатель Родины</h4>
+                    <p>Здоровье: 400 | Урон: 50 | Время: 5с</p>
+                    <p class="level-lang">Язык: Русский + English</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stamp stamp-bottom">ГОСУДАРСТВЕННАЯ ТАЙНА</div>
+    </div>
+    
+    <script>
+        function startLevel(level) {
+            window.location.href = `game.html?level=${level}`;
+        }
+    </script>
+</body>
+</html>
